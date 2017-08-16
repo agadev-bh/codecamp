@@ -6,10 +6,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
     <script src="quotes.js"></script>
 
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" href="style.css">
 
   </head>
   <body>
-    <div><p>teste</p></div>
+    <div ng-controller="QuotesListController as quotes">
+    	<blockquote> 
+    		<h2>{{ chosenQuote }}</h2> 
+    		<footer> {{ chosenAuthor }} </footer>
+    		<button ng-click="quotes.newQuote()">New quote</button>
+    	</blockquote>
+    	
+    </div>
   </body>
 </html>
