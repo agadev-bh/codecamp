@@ -1,7 +1,8 @@
 var quotesApp = angular.module('quotesApp',[]);
 
 quotesApp.controller('QuotesListController', ['$scope', function($scope) {
-	$scope.mainContent = {
+  
+  $scope.mainContent = {
 	    "quotes":["\"Quando vires um homem bom, tenta imitá-lo; quando vires um homem mau, examina-te a ti mesmo.\""
 	            ,"\"Tente mover o mundo - o primeiro passo será mover a si mesmo.\""
 	            ,"\"Eu amo minha esposa mais do que qualquer outras coisa no mundo. Não existe uma outra mulher com quem eu possa me ver casado.\""
@@ -23,8 +24,15 @@ quotesApp.controller('QuotesListController', ['$scope', function($scope) {
 		
 		$scope.color = $scope.getRandomColor();
 
+		$scope.bodyColor = {
+      "background-color" : $scope.color,
+      "color": $scope.color
+    };
 		
-		
+    $scope.btnNewQuote = {
+      "background-color" : $scope.color
+    };
+    
 		console.log($scope.color);
 
 	};
