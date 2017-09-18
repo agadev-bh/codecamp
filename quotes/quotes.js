@@ -1,4 +1,4 @@
-var quotesApp = angular.module('quotesApp',[]);
+﻿var quotesApp = angular.module('quotesApp',[]);
 
 quotesApp.controller('QuotesListController', ['$scope', function($scope) {
   
@@ -25,16 +25,17 @@ quotesApp.controller('QuotesListController', ['$scope', function($scope) {
 		$scope.color = $scope.getRandomColor();
 
 		$scope.bodyColor = {
-      "background-color" : $scope.color,
-      "color": $scope.color
-    };
+			"background-color" : $scope.color,
+			"color": $scope.color,
+			"transition-duration": "2s",
+			//"transition-delay": "0.4s"
+		};
 		
-    $scope.btnNewQuote = {
-      "background-color" : $scope.color
-    };
-    
-		console.log($scope.color);
-
+	    $scope.btnNewQuote = {
+	      "background-color" : $scope.color,
+	      "transition-duration": "2s",
+	      //"transition-delay": "0.4s"
+	    };
 	};
 
 

@@ -7,6 +7,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
     <script src="quotes.js"></script>
+    <script src="https://use.fontawesome.com/676e42ff77.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Duru+Sans" rel="stylesheet">
 
@@ -18,7 +19,13 @@
     	<blockquote> 
     		<h2>{{ chosenQuote }}</h2> 
     		<footer> {{ chosenAuthor }} </footer>
-    		<button ng-click="quotes.newQuote()" ng-style="btnNewQuote">New quote</button>
+        <button ng-click="quotes.newQuote()" ng-style="btnNewQuote"><i class="fa fa-refresh fa-2x" aria-hidden="true"></i></button>
+        <button ng-style="btnNewQuote">
+            <a href="https://twitter.com/share?text={{ chosenQuote }}. {{ chosenAuthor }}" class="twitter-share-button" data-show-count="false"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a><script async charset="utf-8"></script>
+        </button>
+
+        
+
     	</blockquote>
     	
     </div>
