@@ -37,9 +37,5 @@ i{
 
 
 button:hover{
-  opacity: 2;
-}
-
-button:active{
-  transform: translateY(4px);
+  opacity: 0.75;
 }
